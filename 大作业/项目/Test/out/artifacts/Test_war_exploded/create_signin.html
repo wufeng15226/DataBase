@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CreateSign</title>
+</head>
+<body>
+    <form action="./CreateSignin" method="post">
+        <script>
+            function getURLParameter(name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+            }
+            var teachername=getURLParameter("teachername");
+            document.write("<input name='teachername' type='hidden' value='"+ teachername +"'>");
+        </script>
+        <label for="coursename">
+            签到课程名：
+            <input name="coursename" placeholder="请输入进行签到的课程名" type="text" id="coursename">
+        </label><br>
+        <label for="time">
+            签到时长：
+            <input name="time" placeholder="请输入时长（s）" type="number" id="time">
+        </label><br>
+        <input type="submit" value="开始">
+    </form>
+</body>
+</html>

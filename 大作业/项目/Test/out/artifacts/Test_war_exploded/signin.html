@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign</title>
+</head>
+<body>
+    <form action="./Signin" method="post">
+        <script>
+            function getURLParameter(name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+            }
+            var studentname=getURLParameter("studentname");
+            document.write("<input name='studentname' type='hidden' value='"+ studentname +"'>");
+        </script>
+        <label for="sid">
+            签到码：
+            <input name="sid" placeholder="请输入签到码" type="text" id="sid">
+        </label><br>
+        <input type="submit" value="签到">
+    </form>
+</body>
+</html>

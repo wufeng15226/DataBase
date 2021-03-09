@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CreateCourse</title>
+</head>
+<body>
+    请输入课程信息：<br>
+    <form action="./NewCourse" method="post">
+        <script>
+            function getURLParameter(name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+            }
+            var teachername=getURLParameter("teachername");
+            document.write("<input name='teachername' type='hidden' value='"+ teachername +"'>");
+        </script>
+        <label for="coursename">
+            课程名：
+            <input name="coursename" placeholder="请输入课程名" type="text" id="coursename">
+        </label><br>
+        <label for="password">
+            邀请码：
+            <input name="password" placeholder="请输入邀请码" type="password" id="password">
+        </label><br>
+        <label for="credit">
+            学分：
+            <input name="credit" placeholder="请输入学分" type="number" id="credit">
+        </label><br>
+        <input type="submit" value="创建">
+    </form>
+</body>
+</html>

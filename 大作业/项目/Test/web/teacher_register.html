@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>teacher_register</title>
+</head>
+<body>
+<form action="./TeacherRegister" method="post">
+    <label for="teachername">
+        用户名：
+        <input name="teachername" placeholder="请输入用户名" type="text" id="teachername">
+    </label><br>
+    <label for="password">
+        密码：
+        <input name="password" placeholder="请输入密码" type="password" id="password">
+    </label><br>
+    性别：
+    <label for="male">
+        <input name="gender" placeholder="男" type="radio" value="male" id="male"> 男
+    </label>
+    <label for="female">
+        <input name="gender" placeholder="女" type="radio" value="female" id="female"> 女
+    </label><br>
+    <label for="department">
+        学院名：
+        <input name="department" placeholder="请输入学院名" type="text" id="department">
+    </label><br>
+    <input type="submit" value="注册">
+</form>
+</body>
+</html>

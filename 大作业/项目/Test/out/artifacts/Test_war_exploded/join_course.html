@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JoinCourse</title>
+</head>
+<body>
+    请输入课程信息：<br>
+    <form action="./JoinCourse" method="post">
+        <script>
+            function getURLParameter(name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+            }
+            var studentname=getURLParameter("studentname");
+            document.write("<input name='studentname' type='hidden' value='"+ studentname +"'>");
+        </script>
+        <label for="teachername">
+            老师：
+            <input name="teachername" placeholder="请输入用户名" type="text" id="teachername">
+        </label><br>
+        <label for="coursename">
+            课程名：
+            <input name="coursename" placeholder="请输入课程名" type="text" id="coursename">
+        </label><br>
+        <label for="password">
+            邀请码：
+            <input name="password" placeholder="请输入邀请码" type="password" id="password">
+        </label><br>
+        <input type="submit" value="加入">
+    </form>
+</body>
+</html>

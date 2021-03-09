@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TeacherWorkTable</title>
+</head>
+<body>
+    登入成功！<br><br>
+
+    <script>
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+        }
+        var teachername=getURLParameter("teachername");
+        document.write("<a href='./create_signin.html?teachername="+teachername+"'>发布一次签到</a><br><br>");
+        document.write("<a href='./create_course.html?teachername="+teachername+"'>创建课程</a><br>");
+    </script>
+</body>
+</html>
